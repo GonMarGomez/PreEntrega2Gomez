@@ -52,7 +52,10 @@ function comprador(seleccion){
           if(productoSeleccionado === 'si'){
             carrito.push(NotebookEncontrada);
             comprar();
-          } 
+          }
+          else if(productoSeleccionado === 'no'){
+            alert('Gracias por visitar nuestra página, vuelva pronto!')
+          }
             break;
             case 'tablets':
                 let todasLasTablets = tablets.map((producto)=>
@@ -69,6 +72,9 @@ function comprador(seleccion){
             carrito.push(tabletEncontrada);
             comprar();
           } 
+          else if(productoSeleccionado === 'no'){
+            alert('Gracias por visitar nuestra página, vuelva pronto!')
+          }
              break;
                 case 'celulares':
                     let todosLosCelulares = celulares.map((producto)=>
@@ -85,6 +91,9 @@ function comprador(seleccion){
                 carrito.push(celularEncontrado);
                 comprar();
               }    
+              else if(productoSeleccionado === 'no'){
+                alert('Gracias por visitar nuestra página, vuelva pronto!')
+              }
                 break;  
 }
 function comprar(){
@@ -145,7 +154,7 @@ function vendedor(){
                  Precio:${notebookEncontrada.precio}`))
             break;
             default:
-                console.log('no coincide');
+                alert('Producto no encontrado')
             break;
     }
  }
